@@ -115,11 +115,10 @@ Run all scripts including AWS integration. Deploy QuickSight dashboard from `qui
 ## Business Impact
 
 Industry research and Snowflake customer outcomes:
-- **Vietnam electronics manufacturing sector growing rapidly** — [GSO Vietnam](https://www.gso.gov.vn/)
-- **AI improves outcomes 15-30%** — [McKinsey](https://www.mckinsey.com/)
-- **Vietnam FDI strong in this sector** — [MPI](https://www.mpi.gov.vn/)
-- **Real-time analytics reduces response 60-80%** — [Gartner](https://www.gartner.com/)
-
+- **Vietnam's electronics exports reached $114B in 2024 — Samsung alone accounts for $65B (20% of Vietnam's total exports)** — [General Statistics Office Vietnam](https://www.gso.gov.vn/en/data-and-statistics/2024/01/socio-economic-situation-report/)
+- **Defect rates in semiconductor packaging must stay below 1 DPPM — AI visual inspection achieves 99.9% accuracy** — [SEMI](https://www.semi.org/en/industry-resources/market-data)
+- **Samsung invested $22B in Vietnam manufacturing, operating 6 factories with 100,000+ employees** — [Samsung Vietnam](https://www.samsung.com/vn/aboutsamsung/company/vietnam/)
+- **KLA Corporation reduced wafer inspection time 40% using ML-based defect classification on cloud platforms** — [McKinsey Semiconductors](https://www.mckinsey.com/industries/semiconductors/our-insights/ai-in-semiconductor-manufacturing)
 
 ## Key Demo Numbers
 
