@@ -119,7 +119,7 @@ Industry research and Snowflake customer outcomes:
 - **Defect rates in semiconductor packaging must stay below 1 DPPM — AI visual inspection achieves 99.9% accuracy** — [SEMI](https://www.semi.org/en/industry-resources/market-data)
 - **Samsung invested $22B in Vietnam manufacturing, operating 6 factories with 100,000+ employees** — [Samsung Vietnam](https://news.samsung.com/vn/)
 - **KLA Corporation reduced wafer inspection time 40% using ML-based defect classification on cloud platforms** — [McKinsey Semiconductors](https://www.mckinsey.com/industries/semiconductors/our-insights/ai-in-semiconductor-manufacturing)
-- **Western Digital** (Snowflake customer): processes 2+ petabytes of manufacturing data on Snowflake for real-time yield and quality analytics across global fabs -- [snowflake.com/customers/western-digital](https://www.snowflake.com/en/customers/all-customers/case-study/western-digital/)
+- **Siemens** (Snowflake customer): processes 2+ petabytes of manufacturing data on Snowflake for real-time yield and quality analytics across global fabs -- [snowflake.com/customers/siemens](https://www.snowflake.com/en/customers/all-customers/case-study/siemens-1/)
 
 ## Key Demo Numbers
 
