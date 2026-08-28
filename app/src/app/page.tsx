@@ -35,36 +35,36 @@ export default function HomePage() {
   const executiveCockpit = (
     <div className="space-y-6">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <KPICard title="Total Output" value="₫2.4B" status="neutral" />
-        <KPICard title="Defect Rate" value="7" status="warning" />
-        <KPICard title="Anomalies Detected" value="3" status="danger" />
-        <KPICard title="Active Lines" value="124" status="neutral" />
+        <KPICard title="First Pass Yield" value="98.4%" status="neutral" />
+        <KPICard title="Customer Returns" value="0.08%" status="neutral" />
+        <KPICard title="Quality Escapes" value="2" status="danger" />
+        <KPICard title="Inspections (MTD)" value="4.2M" status="neutral" />
       </div>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <Chart
           data={data?.timeseries || [{ period: 'Loading', value: 0 }]}
           type="line"
           xKey="period"
-          yKeys={[{ key: 'value', name: 'Output' }]}
-          title="Output Trend (Weekly)"
+          yKeys={[{ key: 'value', name: 'FPY %' }]}
+          title="First Pass Yield (Daily)"
         />
         <Chart
           data={data?.categories || [{ category: 'Loading', count: 0 }]}
           type="bar"
           xKey="category"
           yKeys={[{ key: 'count', name: 'Count' }]}
-          title="Defect Rate by Line"
+          title="Defect Pareto"
         />
       </div>
       <DataTable
         columns={[
           { key: 'id', header: '#' },
-          { key: 'name', header: 'Line' },
-          { key: 'status', header: 'Status' },
-          { key: 'value', header: 'Output' },
+          { key: 'name', header: 'Product' },
+          { key: 'status', header: 'Quality' },
+          { key: 'value', header: 'FPY %' },
         ]}
         data={data?.entities || []}
-        title="Line Performance"
+        title="Quality by Product Line"
       />
     </div>
   );
@@ -72,16 +72,16 @@ export default function HomePage() {
   const domainTab1 = (
     <div className="space-y-6">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-        <KPICard title="Efficiency" value="87%" />
-        <KPICard title="Utilization" value="72%" />
-        <KPICard title="Growth Rate" value="+8.4%" />
+        <KPICard title="DPMO" value="124" />
+        <KPICard title="Rework Rate" value="1.2%" />
+        <KPICard title="AOI Detection" value="99.4%" />
       </div>
       <Chart
         data={data?.detail || [{ x: 'Loading', y: 0 }]}
         type="area"
         xKey="x"
-        yKeys={[{ key: 'y', name: 'Index' }]}
-        title="Quality Performance Trend"
+        yKeys={[{ key: 'y', name: 'DPMO' }]}
+        title="Defect Trend by Category"
         height={400}
       />
     </div>
@@ -94,17 +94,17 @@ export default function HomePage() {
           data={data?.breakdown || [{ label: 'A', value: 30 }, { label: 'B', value: 70 }]}
           type="pie"
           xKey="label"
-          yKeys={[{ key: 'value', name: 'Score' }]}
-          title="Risk Distribution"
+          yKeys={[{ key: 'value', name: 'Complaints' }]}
+          title="Customer Complaint Trend"
         />
         <ActionMemo
-          persona={{ name: 'Vietnam Operations Lead', role: 'Director of Quality' }}
+          persona={{ name: 'Nguyen Thi Lan Anh', role: 'Quality Director' }}
           context={{}}
           onGenerate={async () => ({
             subject: 'Action Required',
             body: 'AI-generated recommendation based on current data patterns and predicted trends.',
             urgency: 'HIGH',
-            actions: ['Review top defect rate findings', 'Optimize line allocation', 'Prepare quarterly quality report'],
+            actions: ['Contain solder defect escape to Samsung (2 units affected)', 'Deploy AI visual inspection for new connector type', 'Update IPC-610 training for assembly operators'],
           })}
         />
       </div>
@@ -116,9 +116,9 @@ export default function HomePage() {
       <AskAI
         title="Ask AI"
         sampleQuestions={[
-          'Which lines have the highest defect rate?',
-          'Show output trend for the last 30 days',
-          'What is the forecast for next quarter's output?',
+          'Which defect types are trending upward?',
+          'Show quality escape root cause analysis',
+          'What is the ROI of AI visual inspection deployment?',
         ]}
         mode="both"
         onSubmit={async (question, mode) => {
@@ -178,8 +178,8 @@ export default function HomePage() {
 
   const tabs = [
     { id: 'executive-cockpit', label: 'Executive Cockpit', icon: '📊', content: executiveCockpit },
-    { id: 'domain-1', label: 'Quality Analytics', icon: '📈', content: domainTab1 },
-    { id: 'domain-2', label: 'Alerts & Actions', icon: '⚡', content: domainTab2 },
+    { id: 'domain-1', label: 'Defect Analysis', icon: '📈', content: domainTab1 },
+    { id: 'domain-2', label: 'Customer Quality', icon: '⚡', content: domainTab2 },
     { id: 'ask-ai', label: 'Ask AI', icon: '🤖', content: askAiTab },
     { id: 'architecture', label: 'Architecture & Data', icon: '🏗️', content: architectureTab },
   ];
