@@ -21,8 +21,8 @@ Snowflake delivers quality analytics intelligence for Vietnamese electronics man
 | Database | `VIETNAM_ELECTRONICS_QUALITY` |
 | Service | `VIETNAM_ELECTRONICS_QUALITY_APP` |
 | Compute pool | `SEA_DEMOS_VIETNAM_POOL` |
-| Dimension table | `RAW.DOCUMENTS` (20 rows) |
-| Fact table | `RAW.METRICS` (250,000 rows, 90 days) |
+| Dimension table | `RAW.PRODUCTS` (20 rows) |
+| Fact table | `RAW.INSPECTIONS` (250,000 rows, 90 days) |
 | Curated layer | `CURATED.PERFORMANCE_SUMMARY`, `CURATED.TREND_ANALYSIS`, `CURATED.KPI_SUMMARY` |
 | Currency | VND (₫) |
 
@@ -45,8 +45,8 @@ original literal as a fallback, so it still renders if Snowflake is unreachable.
 | First Pass Yield | `98.4%` | average per event |
 | Customer Returns | `0.08%` | average per event |
 | Quality Escapes | `2` | average per event |
-| Inspections (MTD) | `4.2M` | total across Documents |
-| DPMO | `124` | total across Documents |
+| Inspections (MTD) | `4.2M` | total across Products |
+| DPMO | `124` | total across Products |
 | Rework Rate | `1.2%` | average per event |
 | AOI Detection | `99.4%` | average per event |
 
