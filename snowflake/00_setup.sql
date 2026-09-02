@@ -1,16 +1,13 @@
--- ============================================================================
--- Quality Analytics & Defect Prediction
--- Quality Analytics & Defect Prediction for Vietnam - ML.FORECAST and Dynamic Tables power real-time quality analytics intelligence for electronics manufacturing in Ho Chi Minh City & Bac Ninh.
--- ============================================================================
-USE ROLE ACCOUNTADMIN;
-CREATE DATABASE IF NOT EXISTS ELECTRONICS_QUALITY;
-CREATE WAREHOUSE IF NOT EXISTS ELECTRONICS_WH WAREHOUSE_SIZE = 'MEDIUM' AUTO_SUSPEND = 120 AUTO_RESUME = TRUE;
-USE DATABASE ELECTRONICS_QUALITY;
-CREATE SCHEMA IF NOT EXISTS RAW;
-CREATE SCHEMA IF NOT EXISTS CURATED;
-CREATE SCHEMA IF NOT EXISTS ML;
-CREATE SCHEMA IF NOT EXISTS AI;
-CREATE SCHEMA IF NOT EXISTS SEARCH;
-CREATE SCHEMA IF NOT EXISTS APP;
+-- Generated from generator/demo_specs/aws-vietnam-electronics-quality.json
+-- Regenerate with: python3 generator/gen_repo_docs.py aws-vietnam-electronics-quality
+-- This is the schema that is actually deployed for VIETNAM_ELECTRONICS_QUALITY.
 
-USE WAREHOUSE ELECTRONICS_WH;
+-- VIETNAM_ELECTRONICS_QUALITY  (Quality Analytics & Defect Prediction)
+-- generated from generator/demo_specs/aws-vietnam-electronics-quality.json - do not hand-edit
+CREATE DATABASE IF NOT EXISTS VIETNAM_ELECTRONICS_QUALITY;
+CREATE SCHEMA IF NOT EXISTS VIETNAM_ELECTRONICS_QUALITY.RAW;
+CREATE SCHEMA IF NOT EXISTS VIETNAM_ELECTRONICS_QUALITY.CURATED;
+CREATE SCHEMA IF NOT EXISTS VIETNAM_ELECTRONICS_QUALITY.APP;
+USE DATABASE VIETNAM_ELECTRONICS_QUALITY;
+
+-- 5 real regions; entity names carry their region so the two always agree
